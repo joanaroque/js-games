@@ -1,11 +1,36 @@
 body {
-    background-color: #dda0dd;
+    margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+  
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(255,120,227);
 }
 
-a {
-    color: #d2691e;
-  }
+.topnav a {
+    float: left;
+    color: rgb(70,255,255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.topnav a:hover {
+    background-color: rgb(205,112,255);
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #556B2F;
+    color: white;
+}
+
 
 i {
-    color: #556B2F;
+    color: rgb(252,255,55);
 }
