@@ -1,9 +1,12 @@
 body {
+    background-color: rgb(43,43,43);
+}
+
+.clock-container {
    display: flex;
    justify-content: center;
    align-items: center;
    height: 98vh;
-   background-color: rgb(43,43,43);
 }
 
 .clock {
@@ -56,3 +59,13 @@ body {
     left: 145px;
     bottom: 145px;
 }
+
+.back-button {
+    float: right;
+    border: 3px solid pink;
+    border-radius: 50px;
+    padding: 8px;
+    background: cadetblue;
+    color: wheat;
+    cursor: pointer;
+  }

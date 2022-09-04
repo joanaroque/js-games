@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Trebuchet MS', sans-serif;
+    background-color: black;
   }
   
 
@@ -33,4 +34,12 @@ body {
 
 i {
     color: rgb(252,255,55);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9rem;
+    height: 100vh;
 }

@@ -1,5 +1,4 @@
 const cards = document.addEventListener("DOMContentLoaded", () => {
-
   cardArray = [
     {
       name: "cupcake",
@@ -58,73 +57,75 @@ const cards = document.addEventListener("DOMContentLoaded", () => {
   let cardsChosen = [];
   let cardsChosenId = [];
   let cardsWon = [];
-  let semaphore = false;
 
   //? create your board
   function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
-      let card = document.createElement("img"); 
+      let card = document.createElement("img");
 
-      card.setAttribute("src", "images/close.png");
+      card.style.cursor = "pointer";
+
+      card.setAttribute("src", "images/close.jpg");
 
       card.setAttribute("data-id", i);
 
       card.addEventListener("click", flipCard);
+      
       grid.appendChild(card);
     }
   }
 
-
   function checkForMatch() {
-
-    let cards = document.querySelectorAll("img"); 
+    let cards = document.querySelectorAll("img");
     const optionOneId = cardsChosenId[0];
-    const optionTowId = cardsChosenId[1];
+    const optionTwoId = cardsChosenId[1];
 
-    if (cardsChosen[0] === cardsChosen[1]) {
-      alert("You found a match!");
-      
-      cards[optionOneId].setAttribute("src", "images/blank.jpg");
-      cards[optionTowId].setAttribute("src", "images/blank.jpg");
-      
+    if (optionOneId === optionTwoId) {
+      alert("Ai ai, a mesma imagem não conta !");
+
+      cards[optionOneId].setAttribute("src", "images/close.jpg");
+      cards[optionTwoId].setAttribute("src", "images/close.jpg");
+
+    } else if (cardsChosen[0] === cardsChosen[1]) {
+
+      alert("Boa! Encontraste 2 iguais! Continua 🌹 ");
+
+      cards[optionOneId].setAttribute("src", "images/check.jpg");
+      cards[optionTwoId].setAttribute("src", "images/check.jpg");
+
+      cards[optionOneId].removeEventListener('click', flipCard)
+      cards[optionTwoId].removeEventListener('click', flipCard)
+
       cardsWon.push(cardsChosen);
-    } else {
-      cards[optionOneId].setAttribute("src", "images/close.png");
-      cards[optionTowId].setAttribute("src", "images/close.png");
-      alert("Try again... ");
     }
-    cardsChosen = []; 
-    cardsChosenId = []; 
+    else {
+      cards[optionOneId].setAttribute("src", "images/close.jpg");
+      cards[optionTwoId].setAttribute("src", "images/close.jpg");
+
+      alert("Ups, tenta outra vez... ");
+    }
+    cardsChosen = [];
+    cardsChosenId = [];
     resultDisplay.textContent = cardsWon.length;
 
     if (cardsWon.length === cardArray.length / 2) {
-      resultDisplay.textContent = " Congratulation! You found them all!! 🎆  ✨";
+      resultDisplay.textContent =
+        " Parabéns! Encontraste-os todos! 🎆  ✨";
     }
   }
 
- 
   function flipCard() {
-    
+    let cardId = this.getAttribute("data-id");
 
-    if(!semaphore) {
+    cardsChosen.push(cardArray[cardId].name);
 
-      semaphore = true;
-      
-      let cardId = this.getAttribute("data-id");
+    cardsChosenId.push(cardId);
 
-      cardsChosen.push(cardArray[cardId].name);
-  
-      cardsChosenId.push(cardId);
-  
-      this.setAttribute("src", cardArray[cardId].img);
-  
-      if (cardsChosen.length === 2) {
-        setTimeout(checkForMatch, 500);
-      }
-  
+    this.setAttribute("src", cardArray[cardId].img);
+
+    if (cardsChosen.length === 2) {
+      setTimeout(checkForMatch, 500);
     }
-    
-    semaphore = false;
   }
 
   createBoard();
