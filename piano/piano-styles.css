@@ -86,6 +86,7 @@ body {
     justify-content: flex-end;
     padding: 15px;
 }
+
 .back-button {
     float: right;
     border: 3px solid pink;
@@ -95,3 +96,10 @@ body {
     color: wheat;
     cursor: pointer;
   }
+
+  @media (min-width: 600px) {
+    .back-button {
+        padding: 10px;
+        font-size: 30px;
+      }
+}

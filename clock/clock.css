@@ -4,7 +4,7 @@ body {
 
 .clock-container {
    display: flex;
-   justify-content: center;
+   justify-content: flex-end;
    align-items: center;
    height: 98vh;
 }
@@ -69,3 +69,11 @@ body {
     color: wheat;
     cursor: pointer;
   }
+
+
+  @media (min-width: 600px) {
+    .back-button {
+        padding: 10px;
+        font-size: 30px;
+      }
+}

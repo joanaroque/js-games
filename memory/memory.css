@@ -2,6 +2,12 @@ body {
   background: bisque;
 }
 
+.center-memory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -20,4 +26,12 @@ body {
   cursor: pointer;
 }
 
+
+@media (min-width: 600px) {
+  .back {
+      padding: 10px;
+      font-size: 30px;
+    }
+    
+}
     
