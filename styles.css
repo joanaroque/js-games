@@ -1,18 +1,18 @@
 body {
     margin: 0;
     font-family: 'Trebuchet MS', sans-serif;
-    background-color: black;
+    background-image: linear-gradient(to right bottom, #f09ce6, #ff9dbf, #ffb291, #ffd473, #e8f77b);
   }
   
 
 .topnav {
     overflow: hidden;
-    background-color: rgb(255,120,227);
+    background-image: linear-gradient(to left top, #f09ce6, #ff9dbf, #ffb291, #ffd473, #e8f77b);
 }
 
 .topnav a {
     float: left;
-    color: rgb(70,255,255);
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -22,17 +22,16 @@ body {
 }
 
 .topnav a:hover {
-    background-color: rgb(205,112,255);
+    background-color:rgb(70,255,255);
     color: black;
-}
-
-.topnav a.active {
-    background-color: #556B2F;
-    color: white;
 }
 
 
 i {
+    color: rgb(255, 55, 245);
+}
+
+.topnav i:hover {
     color: rgb(252,255,55);
 }
 
@@ -42,6 +41,7 @@ i {
     align-items: center;
     font-size: 9rem;
     height: 100vh;
+    cursor: pointer;
 }
 
 @media (min-width: 600px) {
