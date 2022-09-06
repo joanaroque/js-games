@@ -1,52 +1,52 @@
 const cards = document.addEventListener("DOMContentLoaded", () => {
   cardArray = [
     {
-      name: "cupcake",
-      img: "images/cupcake.jpg",
+      name: "1",
+      img: "images/1.jpg",
     },
     {
-      name: "cupcake",
-      img: "images/cupcake.jpg",
+      name: "1",
+      img: "images/1.jpg",
     },
     {
-      name: "dog",
-      img: "images/dog.png",
+      name: "2",
+      img: "images/2.jpg",
     },
     {
-      name: "dog",
-      img: "images/dog.png",
+      name: "2",
+      img: "images/2.jpg",
     },
     {
-      name: "icecream",
-      img: "images/icecream.jpg",
+      name: "3",
+      img: "images/3.png",
     },
     {
-      name: "icecream",
-      img: "images/icecream.jpg",
+      name: "3",
+      img: "images/3.png",
     },
     {
-      name: "pizza",
-      img: "images/pizza.png",
+      name: "4",
+      img: "images/4.png",
     },
     {
-      name: "pizza",
-      img: "images/pizza.png",
+      name: "4",
+      img: "images/4.png",
     },
     {
-      name: "rainbow",
-      img: "images/rainbow.png",
+      name: "5",
+      img: "images/5.png",
     },
     {
-      name: "rainbow",
-      img: "images/rainbow.png",
+      name: "5",
+      img: "images/5.png",
     },
     {
-      name: "unicorn",
-      img: "images/unicorn.jpg",
+      name: "6",
+      img: "images/6.png",
     },
     {
-      name: "unicorn",
-      img: "images/unicorn.jpg",
+      name: "6",
+      img: "images/6.png",
     },
   ];
 
